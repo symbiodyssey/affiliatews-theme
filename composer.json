@@ -1,0 +1,22 @@
+{
+    "name": "symbiodyssey/affiliatews-theme",
+    "description": "Theme to create an affiliate website",
+    "type": "bolt-theme",
+    "keywords": ["affiliate", "responsive", "modern", "light"],
+    "require": {
+        "bolt/bolt": "^3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "symbiodyssey",
+            "email": "support@symbiodyssey.com"
+        }
+    ],
+    "extra": {
+        "bolt-screenshots": [
+            "screenshots/screenshot1.png",
+            "screenshots/screenshot2.png"
+        ]
+    }
+}
