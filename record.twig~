@@ -1,11 +1,12 @@
 {% extends 'partials/_master.twig' %}
 
 {% block category %}
-{% set tmpl = "partials/_product_mod#{config.get('theme/ws_mode')}#{config.get('theme/ws_ga')==1?'_ga':''}.twig" %}
+{% set ws_mode = config.get('theme/ws_mode') %}
+{% set ws_ga = config.get('theme/ws_ga') %}
     <div class="tiles">
         {% set items = record.related() %}
         {% for item in items %}
-            {% include tmpl %}
+            {% include 'partials/_product.twig' %}
         {% endfor %}
     </div>
 {% endblock category %}

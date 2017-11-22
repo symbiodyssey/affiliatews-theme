@@ -1,15 +1,3 @@
-###########################
-#Affiliate website template
-###########################
-#Thanks for using the affiliate website template.
-#
-#Documentation : http://bolt-affiliate-website-template.readthedocs.io
-#Github : https://github.com/symbiodyssey/affiliatews-theme
-#Website : https://starterkits.symbiodyssey.com/kit/affiliate-website
-#
-#Licence : MIT
-#Copyright : symbiodyssey.com
-
 homepage_template: index.twig
 record_template: record.twig
 listing_template: listing.twig
