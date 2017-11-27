@@ -1,7 +1,7 @@
 <div class="tile" itemscope itemtype="http://schema.org/Product">
 <div class="tile-title"><a href="{{ item.affiliatelink }}" target="_blank" rel="nofollow"><span itemprop="name">{{item.title}}</span></a></div>
-<div class="tile-img"><a href="{{ item.affiliatelink }}" target="_blank" rel="nofollow"><img src="{{ item.image|thumbnail('tileimg') }}" itemprop="image" alt="{{item.img_descr}}"></a></div>
-    <div class="tile-content" itemprop="description">{{ item.content }}</div>
+<div class="tile-img"><a href="{{ item.affiliatelink }}" target="_blank" rel="nofollow"><img src="{% if item.image %} {{ item.image | thumbnail('tileimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}" itemprop="image" alt="{{item.img_descr}}"></a></div>
+    <div class="tile-content" itemprop="description">{{ item.content }}<p>{{paths.theme ~ 'images/default2.png'}}</p></div>
     <div class="tile-footer"  itemprop="offers" itemscope itemtype="http://schema.org/Offer">
         <span class="tile-price" itemprop="price">{{ item.price }} {{ item.currency }}</span>
         <a href="{{ item.affiliatelink }}" target="_blank" rel="nofollow">{{ l('get-it') }}</a>

@@ -1,0 +1,30 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+<div class="twocols"  itemscope itemtype="http://schema.org/Product">
+    <div class="item-content">
+        <h1 itemprop="name">{{record.title}}</h1>
+        <div class="item-review">{{ record.review }}</div>
+    </div>
+    <div class="item-meta">
+        <img src="{% if item.image %} {{ item.image | thumbnail('itemimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}" itemprop="image" alt="{{record.img_descr}}">
+        <div class="item-description" itemprop="description">{{ record.content }}</div>
+        {% if record.taxonomy.tags is defined %}
+        <div class="tags">
+            {% for tag in record.taxonomy.tags %}
+            <a href="/tags/{{ tag }}">{{tag}}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="item-buy"  itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <span class="item-price" itemprop="price">{{ record.price }} {{ record.currency }}</span>        
+            <a href="{{ record.affiliatelink }}" target="_blank" rel="nofollow" onClick="ga('send', 'event', 'Affiliate Link', 'Click on button', '{{record.affiliatelink}}');">{{ l('get-it') }}</a>
+        </div>
+    </div>
+</div>
+
+{% if config.get('theme/related_content')==true %}
+    {% include 'partials/_related_content.twig' %}
+{% endif %}
+
+{% endblock main %}

@@ -1,7 +1,7 @@
 <div class="tile" itemscope itemtype="http://schema.org/Product">
-<div class="tile-title"><a href="{{ item.link }}" target="_blank"><span itemprop="name">{{item.title}}</span></a></div>
-<div class="tile-img"><a href="{{ item.link }}" target="_blank"><img src="{{ item.image|thumbnail('tileimg') }}" itemprop="image" alt="{{item.img_descr}}"></a></div>
-    <div class="tile-content" itemprop="description">{{ item.content }}</div>
-    <div class="tile-footer"><a href="{{ item.link }}" target="_blank" rel="nofollow">{{ l('details') }}</a>
+<div class="tile-title"><a href="{{ item.link }}"><span itemprop="name">{{item.title}}</span></a></div>
+<div class="tile-img"><a href="{{ item.link }}"><img src="{% if item.image %} {{ item.image | thumbnail('tileimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}" itemprop="image" alt="{{item.img_descr}}"></a></div>
+    <div class="tile-content" itemprop="description">{{ item.teaser }}</div>
+    <div class="tile-footer"><a href="{{ item.link }}">{{ l('show-more') }}</a>
     </div>
 </div>

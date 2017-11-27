@@ -1,0 +1,10 @@
+<div class="related">
+        <h1>{{ l('related_content') }}</h1>
+    <div class="tiles">          
+        {% set related = relatedcontentbytags(record, { 'limit' : 5, 'pointsTag' : 5, 'pointsType': 100 }) %}
+        {% set tmpl = "partials/_product_mode#{config.get('theme/ws_mode')}#{config.get('theme/ws_ga')==1?'_ga':''}.twig" %}
+        {% for item in related %}
+            {% include tmpl %}
+        {% endfor %}
+    </div>
+</div>

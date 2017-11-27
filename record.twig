@@ -1,7 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
 {% block category %}
-{% set tmpl = "partials/_product_mod#{config.get('theme/ws_mode')}#{config.get('theme/ws_ga')==1?'_ga':''}.twig" %}
+{% set tmpl = "partials/_product_mode#{config.get('theme/ws_mode')}#{config.get('theme/ws_ga')==1?'_ga':''}.twig" %}
     <div class="tiles">
         {% set items = record.related() %}
         {% for item in items %}
