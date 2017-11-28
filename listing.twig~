@@ -8,7 +8,7 @@
         {% for record in records %}
         <div class="tile">
                     <div class="tile-title"><a href="{{ record.link }}">{{record.title}}</a></div>
-                    <div class="tile-img"><a href="{{ record.link }}"><img src="{% if record.image %} {{ record.image | thumbnail('tileimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}"  alt="{{record.values.banner.title|default('')}}" title="{{record.values.banner.title|default('')}}"></a></div>
+                    <div class="tile-img"><a href="{{ record.link }}"><img src="{% if record.image %} {{ record.image | thumbnail('tileimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}" alt="Illustration"></a></div>
                     <div class="tile-content">{{ record.content|default(record.teaser) }}</div>
                     <div class="tile-footer">
                         <a href="{{ record.link }}">{{ l('show-more') }}</a>

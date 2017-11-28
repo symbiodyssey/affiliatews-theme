@@ -7,7 +7,7 @@
         {% for subcat in subcats %}
         <div class="tile">
                     <div class="tile-title"><a href="{{ subcat.link }}">{{subcat.title}}</a></div>
-                    <div class="tile-img"><a href="{{ subcat.link }}"><img src="{% if subcat.image %} {{ subcat.image | thumbnail('tileimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}" alt="{{record.values.banner.title|default('')}}" title="{{record.values.banner.title|default('')}}"></a></div>
+                    <div class="tile-img"><a href="{{ subcat.link }}"><img src="{% if subcat.image %} {{ subcat.image | thumbnail('tileimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}" alt="Illustration"></a></div>
                     <div class="tile-footer">
                         <a href="{{ subcat.link }}">{{ l('show-more') }}</a>
                     </div>

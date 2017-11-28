@@ -312,7 +312,6 @@ footer .link-so a:hover {
        padding:30px;
        top:200px;
        right:0;
-       width:300px;
     }
     
     footer {
