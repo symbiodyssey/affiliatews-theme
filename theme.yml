@@ -23,7 +23,7 @@ notfound: notfound.twig
 #Default mode: 1, Items and categories: 2, Items, categories and reviews: 3
 #Set the value between 1 and 3 accordingly. Default value: 1
 #Read more in the doc : http://bolt-affiliate-website-template.readthedocs.io/en/latest/website_architecture.html 
-ws_mode: 3
+ws_mode: 1
 
 ###################################
 #Use the events of Google Analytics
@@ -39,7 +39,7 @@ ws_ga: 0
 #This option requires that you install the extension xiaohutai/bolt-relatedcontentbytags 
 #and use the architecture in mode 3
 #To use it set related_content to true otherwise to false
-related_content: true
+related_content: false
 
 # Aliases can be set to restrict images to a specific set of available
 # resolutions or to decouple image sizes from template files.
