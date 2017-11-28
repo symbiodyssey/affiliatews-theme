@@ -4,10 +4,13 @@
 <div class="twocols"  itemscope itemtype="http://schema.org/Product">
     <div class="item-content">
         <h1 itemprop="name">{{record.title}}</h1>
+        {% if record.banner %}
+            <div class="item-banner"><img src=" {{ record.banner|thumbnail('itembanner') }}" alt="{{record.values.banner.title}}" title="{{record.values.banner.title}}"></div>
+        {% endif %}
         <div class="item-review">{{ record.review }}</div>
     </div>
     <div class="item-meta">
-        <img src="{% if item.image %} {{ item.image | thumbnail('itemimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}" itemprop="image" alt="{{record.img_descr}}">
+        <img src="{% if record.image %} {{ record.image | thumbnail('itemimg') }} {% else %} {{ asset('images/default.png', 'theme') }} {% endif %}" itemprop="image" alt="{{record.values.image.alt}}" title="{{record.values.image.title}}">
         <div class="item-description" itemprop="description">{{ record.content }}</div>
         {% if record.taxonomy.tags is defined %}
         <div class="tags">

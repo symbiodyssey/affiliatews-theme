@@ -51,3 +51,6 @@ thumbnails:
         itemimg:
             size: [300,200]
             cropping: crop
+        itembanner:
+            size: [1024,400]
+            cropping: crop

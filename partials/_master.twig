@@ -18,7 +18,7 @@
                 <div class="title">
                 {% setcontent logo = 'block/logo' %}
                  {% if logo.image is not empty %}
-                <a href="/"><img src="{{ image(logo.image) }}"/></a>
+                <a href="/"><img src="{{ image(logo.image) }}" alt="{{logo.values.image.alt}}" title="{{logo.values.image.title}}"/></a>
                  {% endif %}
                 <a href="/"><h1>{{app.config.get('general/sitename')}}</h1></a>
                 </div>
