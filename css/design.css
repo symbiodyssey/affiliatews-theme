@@ -10,7 +10,6 @@ a {
 }
 
 header .title {
-    background-color: #333;
     height:60px;
 }
 
@@ -19,14 +18,16 @@ header .title img {
 }
 
 #open {
-    height:60px;
-    float:left;
-    font-size:2em;
+    font-size:1.5em;
     color:#fff;
+    padding:5px 10px 5px 10px;
+    border-radius:7px;
+    background-color: #707070;
+    opacity: 0.7;
 }
 
-#open i {
-    padding-top:15px;
+#open:hover {
+    background-color:#82888c;
 }
 
 header .banner img {
@@ -34,12 +35,13 @@ header .banner img {
 }
 
 .title h1 {
-    color:#fff;
+    color:#333;
     text-transform: uppercase;
 }
 
 header .title img{
-     height: 60px;
+     height: 50px;
+    padding:5px;
  }
 
 .top-menu a, .top-menu .dropbtn {
@@ -47,21 +49,13 @@ header .title img{
 }
 
 .top-menu {
-    
-}
-
-.dropdown:hover .dropbtn {
-    background-color:#e03347;
-    color:#fff;
+    background-color: #333;
+    transition: width .5s;
+    opacity:0.9
 }
 
 .tiles {
-    margin-top:50px;
     margin-bottom:50px;
-}
-
-.dropdown a {
-    color:#333;
 }
 
 .tile {
@@ -146,6 +140,10 @@ article {
 
 .dropbtn {
     cursor:pointer;
+}
+
+.dropdown-content, .fixable-bar > a {
+    border-bottom: 1px solid #888;
 }
 
 .dropdown-content .last-drop-elm {
@@ -250,7 +248,7 @@ div .pagination ul {
 }
 
 .item-buy a:hover {
-    background-color:#226a2a;
+    background-color:#68c4f9;
 }
 
 .item-buy span {
@@ -279,17 +277,17 @@ div .pagination ul {
     display:inline-block;
     padding:5px;
     margin-right:5px;
-
+    font-weight:bold;
     border-radius:5px;
-    background-color:#7ce076;
+    background-color:#51c14b;
     text-decoration:none;
     color:#fff;
     text-transform: uppercase;
 }
 
 .tags a:hover {
-    background-color:#baf7b7;
-    color:#333;
+    background-color:#88d884;
+    color:#fff;
 }
 
 @media screen and (min-width: 1024px) {
@@ -299,26 +297,51 @@ div .pagination ul {
     }
     
     .top-menu {
+        margin-top:50px;
         display:block;
         background-color:#fff;
+        opacity:1;
     }
     
     main {
          margin-top:100px;
     }
     
+    header .title {
+        background-color: #515356;
+    }
+    
+    .title h1 {
+        color:#fff;
+    }
+    
     header .top-menu a {
         color:#333;
     }
     
-    header .top-menu a:hover {
-        background-color: #e03347;
+    .container a:hover, .top-menu a:hover,
+    .dropdown:hover .dropbtn {
+        background-color:#c9162b;
         color:#fff;
+    }
+    
+    .dropdown-content, .fixable-bar > a {
+        border-bottom: 0;
     }
     
     .top-menu .dropbtn {
         color:#333;
     }
+    
+    .dropdown a {
+        color:#333;
+    }
+    
+    .dropdown-content a {
+        color:#000;
+        padding: 5px 10px 5px 10px;
+    }
+    
     
     .tile {
         margin-bottom:20px;

@@ -12,10 +12,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
+        <div id="open" onclick="openNav()"><i class="fa fa-bars"></i></div>
         <div class="content">
             <header>
                 <div class="title">
-                    <span id="open" onclick="openNav()"><i class="fa fa-bars"></i></span>
                 {% setcontent logo = 'block/logo' %}
                  {% if logo.image is not empty %}
                 <a href="/"><img src="{{ image(logo.image) }}"/></a>
