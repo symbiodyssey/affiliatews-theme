@@ -3,8 +3,6 @@
 {% block category %}
     <div class="categories">
     <div class="tiles">
-        {% setcontent default_pic = 'block/footer' %}
-            {{footer.content}}
         {% for record in records %}
         <div class="tile">
                     <div class="tile-title"><a href="{{ record.link }}">{{record.title}}</a></div>
