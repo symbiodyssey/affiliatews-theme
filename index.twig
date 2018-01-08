@@ -2,7 +2,7 @@
 
 {% block banner %}
 <div class="banner">{% setcontent logo = 'block/banner' %}
-{% if logo.image is not empty %}
+{% if logo is not empty and logo.image is not empty %}
     <img src="{{ image(logo.image) }}" alt="{{logo.values.banner.title|default('')}}" title="{{logo.values.banner.title|default('')}}"/>
 {% endif %}
 </div>
